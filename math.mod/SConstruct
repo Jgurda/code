@@ -1,5 +1,1 @@
-srcprefix = "src/"
-srcstring = "main.cpp mathmod.h mexception.h munittester.cpp \
-munittester.h tests.h"
-sources = [ srcprefix+s for s in srcstring.split() ]
-Program("build/test", sources, CXXFLAGS="-O2")
+Program("build/test", Glob("src/*.cpp"), CXXFLAGS="-O2")
